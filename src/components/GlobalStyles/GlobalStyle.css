@@ -2,6 +2,9 @@
 
 :root {
     --text-color: #000;
+
+    --layout-header-width: 1300px;
+    --layout-header-height: 60px;
 }
 
 * {

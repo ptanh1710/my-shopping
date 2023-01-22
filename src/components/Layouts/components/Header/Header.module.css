@@ -1,0 +1,135 @@
+.wrapper {
+    width: 100%;
+    height: var(--layout-header-height);
+    padding: 0 1rem;
+    background-image: linear-gradient(90deg, #ff9a9e, #fecfef);
+}
+
+.container {
+    width: var(--layout-header-width);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Logo */
+.logo {
+    width: calc(var(--layout-header-height) - 10px);
+    height: calc(var(--layout-header-height) - 10px);
+}
+
+.logoImg {
+    height: 100%;
+    object-fit: cover;
+    animation: logo-rotate 5s infinite linear;
+}
+
+@keyframes logo-rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* Search Box */
+.searchBox {
+    --search-height: calc(var(--layout-header-height) - 27px);
+    --search-btn-width: 52px;
+    --search-spacer-width: 5px;
+
+    width: 400px;
+    height: var(--search-height);
+    background-color: #f3efee;
+    border: 1px solid #d9edff;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.searchBox:focus-within {
+    border-color: #5236ff;
+}
+
+.searchBox input {
+    height: 100%;
+    flex: 1;
+    padding-left: 0.7rem;
+    caret-color: #ff9a9e;
+    color: #000;
+    background-color: transparent;
+    font-size: 0.7rem;
+}
+
+.searchBox::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: calc(var(--search-height) - var(--search-spacer-width) * 2);
+    background-color: rgba(0, 0, 0, 0.3);
+    right: var(--search-btn-width);
+}
+
+.searchBtn {
+    height: 100%;
+    width: var(--search-btn-width);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 0.6rem;
+}
+
+.searchBtn:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.searchBtn:active {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.searchBox input:not(:placeholder-shown) ~ .searchBtn {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* Actions */
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.item {
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.itemCount {
+    min-width: 0.7rem;
+    padding: 0 0.2rem;
+    position: absolute;
+    top: -7px;
+    right: -13px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4b6cb7;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 0.8rem;
+}
