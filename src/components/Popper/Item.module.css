@@ -1,0 +1,15 @@
+.item {
+    padding: 9px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item:hover {
+    background: rgba(22, 24, 35, 0.04);
+}
+
+.item:active {
+    background: rgba(22, 24, 35, 0.02);
+}

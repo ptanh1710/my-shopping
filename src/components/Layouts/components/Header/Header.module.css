@@ -1,4 +1,6 @@
 .wrapper {
+    --search-box-width: 400px;
+
     width: 100%;
     height: var(--layout-header-height);
     padding: 0 1rem;
@@ -43,7 +45,7 @@
     --search-btn-width: 52px;
     --search-spacer-width: 5px;
 
-    width: 400px;
+    width: var(--search-box-width);
     height: var(--search-height);
     background-color: #f3efee;
     border: 1px solid #d9edff;
@@ -100,6 +102,32 @@
     color: rgba(0, 0, 0, 1);
 }
 
+.searchResult {
+    width: var(--search-box-width);
+}
+
+.searchImg {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.searchImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.searchInfo {
+    flex: 1;
+}
+
+.searchInfo p {
+    font-weight: 600;
+    font-size: 0.5rem;
+}
+
 /* Actions */
 
 .actions {
@@ -132,4 +160,11 @@
 
 .icon {
     font-size: 0.8rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
 }
